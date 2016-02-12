@@ -1,0 +1,194 @@
+body, header, #city_article img, article{
+	width: 100%;
+    min-width: initial;
+    max-width: initial;
+}
+
+a, a:visited, a:active {
+	text-decoration: none;
+	color: inherit;
+}
+
+.box{
+	border: none;
+    border-top: 2px darkgray solid;
+	border-bottom: 2px darkgray solid;
+    color: inherit;
+    background-color: white;
+	
+}
+.box:hover{
+	background: inherit;
+}
+
+
+body {
+	font-family: 'Comfortaa', cursive;
+	font-weight: 300;
+	margin: 0 auto;
+	background: #9DB6DF;
+	
+}
+
+header {
+	height: 10vh;
+	min-height: 60px;
+	width: 100%;
+	color: #6B6A6A;
+	font-size: 2.2em;
+	z-index: 9999;
+  	top: 0;
+  	position: fixed;
+	text-align: center;
+	/* animation magic */
+  	-webkit-transition: all 0.4s ease-in-out;
+ 	-moz-transition: all 0.4s ease-in-out ;
+}
+.shrink{
+	height: 60px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	background: rgba(255,255,255,0.85);
+}
+#nav-toggle {
+	display: inline;
+	position: absolute;
+    right: 0px;
+    padding-right: 5px;
+}
+#nav-toggle img{
+	width: 40px;
+}
+header img {
+	height: inherit;
+	min-height: 60px;
+	max-height: 80px;
+	vertical-align: middle;
+	margin-left: 0px;
+}
+nav {
+    display: none;
+    position: initial;
+    right: initial;
+}
+header nav li{
+    font-size: .5em;
+    display: block;
+    margin-right: 0px;
+    padding: 15px;
+    border-radius: 0px;
+    background: white;
+    box-shadow: none;
+    border-top: 2px darkgray solid;
+}
+header nav li:hover{
+	background: #e2e2e2;
+}
+
+#body{
+	padding-top: 10vh;
+	background: white;
+}
+article{
+	font-weight: 400;
+    height: initial;
+    min-height: 700px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+article img{
+	width: 100%;
+	vertical-align: bottom;
+}
+#city_article{
+	background: #62AA22;
+}
+#about {
+    font-size: 1.25em;
+    color: #91E044;
+	padding: 80px 20px 0px 30%;
+	text-align: right;
+	background: #62AA22;
+}
+
+#benefits_article {
+	background: #1F73E5;
+}
+.blue_title {
+	color: #1F73E5;
+	background: white;
+	font-size: 1.5em;
+	padding: 40px; /* Needs Work to be more Fluid with screen height*/
+}
+#benefits {
+    min-height: 300px;
+    font-size: 1.25em;
+    color: white;
+	background: #1F73E5;
+}
+#benefits img{
+	width: 60px;
+}
+.benefit{ /* Needs work to make more dynamic */
+	width: 250px;
+	height: 280px;
+    display: inline-block;
+    text-align: center;
+    padding: 10px 0px;
+	margin: 10px 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.24), 0 1px 2px rgba(0,0,0,0.36);
+	vertical-align: bottom;
+}
+.benefit p{
+	padding: 0px 10px;
+}
+
+#info_article{
+	
+}
+#info_article img{
+	padding: 20px;
+	width: 200px;
+}
+#info_article h1 {
+    color: #8FA8D5;
+}
+#info_article p{
+	width: 80%;
+    margin: auto;
+}
+#info_article form{
+	margin: 20px;
+}
+#info_article input, #info_article .button{ /* Need to finish button styling */
+	display: block;
+    width: 250px;
+    height: 40px;
+    margin: 10px auto;
+	border: none;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	text-align: center;
+    font-family: inherit;
+}
+#info_article .button{
+	background-color: #9DB6DF;
+    border: none;
+    color: white;
+}
+#info_article .button:hover{
+	background-color: #7190C3;
+}
+
+footer{
+	color: #6B6A6A;
+	font-size: 2.2em;
+	z-index: 9999;
+  	bottom: 0;
+  	position: relative;
+	font-size: 1em;
+	background-color: white;
+	padding: 5px 10px;
+}
+footer nav li{
+	display: inline-block;
+	margin-left: 20px;
+}

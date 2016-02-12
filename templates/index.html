@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block body %}
+	<article id='city_article'>
+		<img src="/img/city.svg"/>
+		<div id='about'>
+			Launched in February 2015 in Indianapolis, IN, drYve creates value for all parties involved in the ride-sharing experience.  Forged out of a confluence of needs from ride-sharing drivers, riders, and local advertisers, drYve  blends an old school concept into a new school environment.  drYve is Indy based with a midwestern footprint and plans for national expansion soon.
+		</div>
+	</article>
+	<article id='benefits_article'>
+		<div class='blue_title'>increasing revenue, improving rides, growing businesses</div>
+		<img src="/img/graph.svg"/>
+		<div id="benefits">
+			<div class="benefit">
+				<img src="/img/wallet.svg"/>
+				<p>drYve compensates drivers with added income streams for the work they are already doing.</p>
+			</div>
+			<div class="benefit">
+				<img src="/img/gear.svg"/>
+				<p>We provide riders with entertaining and informative content as well as exclusive offers and discounts to businesses.</p>
+			</div>
+			<div class="benefit">
+				<img src="/img/business.svg"/>
+				<p>drYve offers the opportunity for businesses to interact with the ride-sharing rider in an intimate and controlled setting</p>
+			</div>
+		</div>
+	</article>
+	<article id='info_article'>
+		<img src="/img/dryve.svg"/>
+		<h1>Interested in working with drYve?</h1>
+		<p>drYve is currently in a techical preview but is looking for both drivers and advertisers to develop the platform.</p>
+		</br>
+		<p>Sign up now to get started as a driver, or get more info!</br>Businesses can sign up here, to learn more about advertising on drYve</p>
+		<h1>Stay Up to Date</h1>
+		<p>Enter your email address below to subscribe to the drYve newsletter.</p>
+		<form id="newsletter" action="newsletter" method="post">
+			<input name='newsletter_email' type="email" placeholder="hello@dryve.io"></input>
+			<input type="submit" type="Subscribe" class="button">
+		</form>
+	</article>
+{% endblock %}

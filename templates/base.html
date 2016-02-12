@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>DrYve</title>
+		<link href='http://fonts.googleapis.com/css?family=Comfortaa:300,400' rel='stylesheet' type='text/css'/>
+		<link href="/css/base.css" rel="stylesheet" type="text/css"/>
+		<link rel="stylesheet" type="text/css" media="only screen and (max-width: 480px), only screen and (max-device-width: 480px)" href="/css/small-design.css">
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script type="text/javascript" src="/js/base.js"></script>
+		<link rel="shortcut icon" type="image/x-icon" href="/img/logo.ico" />
+		<script>//Google Analytics code
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		
+		  ga('create', 'UA-64988866-1', 'auto');
+		  ga('send', 'pageview');
+		
+		</script>
+	</head>
+	<body>
+		<header>
+			<img src="/img/dryve.svg"/>
+			<a href="/">drYve {%if admin%}admin{%endif%}</a>
+			<a id="nav-toggle" onclick="toggleNav()"><img src="/img/menu.svg"/></a>
+			<nav class="nav-collapse">
+				{% if admin %}
+					<li><a href="/admin/user_info/drivers">user info</a></li>
+					<li><a href="/admin/campaigns">campaigns</a></li>
+				{% else %}
+					<li><a href="/#about">about</a></li>
+					<li><a href="/#newsletter">newsletter</a></li>
+					<li><a href="/signup/advertiser">advertising</a></li>
+					<li class="box"><a href="/signup/driver">sign up</a></li>
+				{% endif %}
+				{% if logout_btn_class != None %}
+					<li class={{logout_btn_class}}><a href={{logout_url}}>logout</a></li>
+				{% endif %}
+			</nav>
+			<div id="message" class={{message_class}}>{{message_text}}</div>
+		</header>
+		<div id='body'>
+			{% block body %}{% endblock %}
+		</div>
+		<footer>
+			&copy;2015 drYve, designed by <a href="//nic.odua.co">nic</a>
+			<nav>
+				<li><a href="//twitter.com/drYve_Inc">twitter</a></li>
+				<li><a href="mailto:kevin@dryve.io">email</a></li>
+				<li><a href="/signup/driver">drivers</a></li>
+				<li><a href="/signup/advertiser">advertisers</a></li>
+				<li><a href="//www.iubenda.com/privacy-policy/747631">privacy</a><script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src = "//cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script></li>
+				<li><a href="/sitemap.xml">sitemap</a></li>
+				<li></li>
+			</nav>
+		</footer>
+	</body>
+</html>

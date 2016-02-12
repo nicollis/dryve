@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block body %}
+	<div class="signup_container">
+		<div class="signup_background">
+			<img src="/img/signup.svg"></img>
+				<hr/>
+		</div>
+		<form id="driver_signup" action="#" method="post">
+			<h3>Signup to become an Advertiser!</h3>
+			<input name='name' type="text" placeholder="Jackie Boy"></input><br/>
+			<input name='company' type="text" placeholder="Jackie's Inc.'"></input><br/>
+			<input name='phone' type="tel" placeholder="317-555-5876"></input><br/>
+			<input name='email' type="email" placeholder="new_driver@dryve.io"></input><br/>
+			Target Market<br/>
+			<textarea name='target_market'></textarea>
+			Territories you would like to reach<br/>
+			<textarea name='territories'></textarea>
+			Other info<br/>
+			<textarea name='other_info'></textarea>
+			<input type="submit" type="Subscribe" class="button">
+		</form>
+	</div>
+<script type="text/javascript">
+	$(document).ready(function(){
+	 var dh = $(document).height(); //document height here
+	 var ih = $('.signup_background').height(); //banner image height
+	 var hh = $('header').height(); //header height
+	 var fh = $('footer').outerHeight(); //footer height
+	 var wh = Number(dh - hh - fh - ih); //this is the height for the wrapper
+	 $('form').css('min-height', wh); //set the height for the wrapper div
+	});
+</script>
+{% endblock %}

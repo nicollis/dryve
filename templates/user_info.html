@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% block body %}
+	<div class="signup_container">
+		<div class="signup_background">
+			<img src="/img/signup.svg"></img>
+				<hr/>
+		</div>
+		<div>
+			<li><a href="/admin/user_info/drivers">drivers</a></li>
+			<li><a href="/admin/user_info/advertisers">advertisers</a></li>
+			<li><a href="/admin/user_info/newsletter">newsletter</a></li>
+		</div>
+		
+		<h3>{{title}}</h3>
+		<table style="width:100%">
+			{% if driver %}
+		  	<tr>
+		    	<th>name</th>
+		    	<th>phone</th>
+		    	<th>email</th>
+		    	<th>city</th>
+		    	<th>state</th>
+		    	<th>company</th>
+		    	<th>segments</th>
+		    	<th>morning</th>
+		    	<th>midday</th>
+		    	<th>afternoon</th>
+		    	<th>latenight</th>
+		    	<th>signed-up</th>
+		  	</tr>
+			{% for row in data %}
+		  	<tr style="background-color: {% cycle '#9DB6DF' 'white' %}">
+			    <td>{{row.name}}</td>
+				<td>{{row.phone}}</td>
+				<td>{{row.email}}</td>
+				<td>{{row.city}}</td>
+				<td>{{row.state}}</td>
+				<td>{{row.company}}</td>
+				<td>{{row.segments}}</td>
+				<td>{{row.mornings}}</td>
+				<td>{{row.midday}}</td>
+				<td>{{row.afternoon}}</td>
+				<td>{{row.latenight}}</td>
+				<td>{{row.date}}</td>
+			</tr>
+			{% endfor %}
+			{% endif %}
+			{% if advertiser %}
+			<tr>
+				<th>name</th>
+				<th>company</th>
+				<th>phone</th>
+				<th>email</th>
+				<th>target market</th>
+				<th>territories</th>
+				<th>other info</th>
+				<th>signup date</th>
+			</tr>
+			{% for row in data %}
+			<tr style="background-color: {% cycle '#9DB6DF' 'white' %}">
+				<td>{{row.name}}</td>
+				<td>{{row.company}}</td>
+				<td>{{row.phone}}</td>
+				<td>{{row.email}}</td>
+				<td>{{row.target_market}}</td>
+				<td>{{row.territories}}</td>
+				<td>{{row.other_info}}</td>
+				<td>{{row.date}}</td>
+			</tr>
+			{% endfor %}
+			{% endif %}
+			{% if newsletter %}
+			<tr>
+				<th>email</th>
+				<th>date</th>
+			</tr>
+			{% for row in data %}
+			<tr style="background-color: {% cycle '#9DB6DF' 'white' %}">
+				<td>{{row.email}}</td>
+				<td>{{row.date}}</td>
+			</tr>
+			{% endfor %}
+			{% endif %}
+		  
+		</table>
+	</div>
+<script type="text/javascript">
+	$(document).ready(function(){
+	 var dh = $(document).height(); //document height here
+	 var ih = $('.signup_background').height(); //banner image height
+	 var hh = $('header').height(); //header height
+	 var fh = $('footer').outerHeight(); //footer height
+	 var wh = Number(dh - hh - fh - ih); //this is the height for the wrapper
+	 $('signup_container').css('min-height', wh); //set the height for the wrapper div
+	});
+</script>
+{% endblock %}

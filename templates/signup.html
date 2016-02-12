@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+{% block body %}
+	<div class="signup_container">
+		<div class="signup_background">
+			<img src="/img/signup.svg"></img>
+				<hr/>
+		</div>
+		<form id="driver_signup" action="#" method="post">
+			<h3>Signup to become a Driver!</h3>
+			<input name='name' type="text" placeholder="Jackie Boy"></input><br/>
+			<input name='phone' type="tel" placeholder="317-555-5876"></input><br/>
+			<input name='email' type="email" placeholder="new_driver@dryve.io"></input><br/>
+			<input name='city' type="text" placeholder="Indianapolis"></input><br/>
+			<select name="state" class="styled-select">
+	            <option value="AL">AL</option>
+	            <option value="AK">AK</option>
+	            <option value="AZ">AZ</option>
+	            <option value="AR">AR</option>
+	            <option value="CA">CA</option>
+	            <option value="CO">CO</option>
+	            <option value="CT">CT</option>
+	            <option value="DE">DE</option>
+	            <option value="DC">DC</option>
+	            <option value="FL">FL</option>
+	            <option value="GA">GA</option>
+	            <option value="HI">HI</option>
+	            <option value="ID">ID</option>
+	            <option value="IL">IL</option>
+	            <option value="IN" selected>IN</option>
+	            <option value="IA">IA</option>
+	            <option value="KS">KS</option>
+	            <option value="KY">KY</option>
+	            <option value="LA">LA</option>
+	            <option value="ME">ME</option>
+	            <option value="MD">MD</option>
+	            <option value="MA">MA</option>
+	            <option value="MI">MI</option>
+	            <option value="MN">MN</option>
+	            <option value="MS">MS</option>
+	            <option value="MO">MO</option>
+	            <option value="MT">MT</option>
+	            <option value="NE">NE</option>
+	            <option value="NV">NV</option>
+	            <option value="NH">NH</option>
+	            <option value="NJ">NJ</option>
+	            <option value="NM">NM</option>
+	            <option value="NY">NY</option>
+	            <option value="NC">NC</option>
+	            <option value="ND">ND</option>
+	            <option value="OH">OH</option>
+	            <option value="OK">OK</option>
+	            <option value="OR">OR</option>
+	            <option value="PA">PA</option>
+	            <option value="RI">RI</option>
+	            <option value="SC">SC</option>
+	            <option value="SD">SD</option>
+	            <option value="TN">TN</option>
+	            <option value="TX">TX</option>
+	            <option value="UT">UT</option>
+	            <option value="VT">VT</option>
+	            <option value="VA">VA</option>
+	            <option value="WA">WA</option>
+	            <option value="WV">WV</option>
+	            <option value="WI">WI</option>
+	            <option value="WY">WY</option>
+	        </select>
+			Who do you drive for?<br/>
+			<input type="checkbox" name="company" value="uber">Uber</input>
+			<input type="checkbox" name="company" value="lyft">Lyft</input>
+			<input type="checkbox" name="company" value="sidecar">Sidecar</input><br/>
+			<input type="number" name="segments" placeholder="Segments/Month"></input><br/>
+			<select name='mornings'>
+				<option value="1" selected>1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+			</select> Mornings (5am - 10am)<br/>
+			<select name='midday'>
+				<option value="1">1</option>
+				<option value="2" selected>2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+			</select> Mid-days (10am - 3pm)<br/>
+			<select name='afternoon'>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3" selected>3</option>
+				<option value="4">4</option>
+			</select> Afternoon (3pm - 8pm)<br/>
+			<select name='latenight'>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4" selected>4</option>
+			</select> Late Night (8pm - 5am)<br/>
+			<input type="submit" type="Subscribe" class="button">
+		</form>
+	</div>
+<script type="text/javascript">
+	$(document).ready(function(){
+	 var dh = $(document).height(); //document height here
+	 var ih = $('.signup_background').height(); //banner image height
+	 var hh = $('header').height(); //header height
+	 var fh = $('footer').outerHeight(); //footer height
+	 var wh = Number(dh - hh - fh - ih); //this is the height for the wrapper
+	 $('form').css('min-height', wh); //set the height for the wrapper div
+	});
+</script>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block body %}
+	<div class="signup_container">
+		<div class="signup_background">
+			<img src="/img/signup.svg"></img>
+				<hr/>
+		</div>
+		<form id="campaign_creation" action="#" method="post">
+			<h3>Create a new Ad Campaign!</h3>
+			<h4>{{ad_campaign_url}}</h4>
+			<input name='name' type="text" placeholder="Facebook Drivers"></input>
+			<input name='details' type="text" placeholder="A campiagn to get more drivers via Facebook"></input>
+			<input type="submit" type="Subscribe" class="button">
+		</form>
+		
+		<h3>Current Campaigns</h3>
+		<table style="width:100%">
+		  <tr>
+		    <th>Name</th>
+		    <th>Details</th> 
+		    <th>Clicks</th>
+			<th>Link</th>
+			<th>Date</th>
+		  </tr>
+		  {% for campaign in campaigns %}
+		  <tr style="background-color: {% cycle '#9DB6DF' 'white' %}">
+		    <td>{{campaign.name}}</td>
+		    <td>{{campaign.details}}</td>
+			<td>{{campaign.clicks}}</td>
+			<td>{{campaign.link}}</td>
+			<td>{{campaign.start_date}}</td>
+		  </tr>
+		  {% endfor %}
+		</table>
+	</div>
+<script type="text/javascript">
+	$(document).ready(function(){
+	 var dh = $(document).height(); //document height here
+	 var ih = $('.signup_background').height(); //banner image height
+	 var hh = $('header').height(); //header height
+	 var fh = $('footer').outerHeight(); //footer height
+	 var wh = Number(dh - hh - fh - ih); //this is the height for the wrapper
+	 $('signup_container').css('min-height', wh); //set the height for the wrapper div
+	});
+</script>
+{% endblock %}

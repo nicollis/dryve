@@ -1,0 +1,263 @@
+body, html{
+	height: 100%;
+}
+
+body, header, #city_article img, article{
+	max-width: 1200px;
+	min-width: 700px;
+}
+
+a, a:visited, a:active {
+	text-decoration: none;
+	color: inherit;
+}
+
+.box{
+	border: 2px solid #6B6A6A;
+	color: white;
+    background-color: darkgray;
+}
+.box:hover{
+	background: #8FA8D5;
+}
+.hide{
+	display: none;
+}
+.show{
+	display: inline-block;
+}
+
+
+body {
+	font-family: 'Comfortaa', cursive;
+	font-weight: 300;
+	margin: 0 auto;
+	background: #9DB6DF;
+}
+
+header {
+	height: 10vh;
+	min-height: 60px;
+	width: 100%;
+	color: #6B6A6A;
+	font-size: 2.2em;
+	z-index: 9999;
+  	top: 0;
+  	position: fixed;
+	/* animation magic */
+  	-webkit-transition: all 0.4s ease-in-out;
+ 	-moz-transition: all 0.4s ease-in-out ;
+}
+#message{
+	font-size: 0.4em;
+    padding: 5px;
+}
+.good_message{
+	background-color: #91E044;
+	display: block;
+}
+.bad_message{
+	background-color: indianred;
+}
+.no_message{
+	display: none;
+}
+.shrink{
+	height: 60px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	background: rgba(255,255,255,0.85);
+}
+header img {
+	height: inherit;
+	min-height: 60px;
+	max-height: 80px;
+	vertical-align: middle;
+	margin-left: 50px;
+}
+#nav-toggle {
+	display: none;
+}
+nav {
+	display: inline;
+	position: absolute;
+	right: 0px;
+}
+header nav li, .signup_container div li{
+	font-size: .5em;
+	display: inline-block;
+	margin-right: 20px;
+	padding: 5px;
+	border-radius: 6px;
+	background: white;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+header nav li:hover, .signup_container div li:hover{
+	background: #e2e2e2;
+}
+
+.signup_container div li {
+	font-size: 1em;
+	margin: 10px;
+}
+
+#body{
+	padding-top: 10vh;
+	background: white;
+}
+article{
+	font-weight: 400;
+	height: 90vh;
+	min-height: 800px;
+	text-align: center;
+}
+article img{
+	width: 100%;
+	vertical-align: bottom;
+}
+#city_article{
+	background: #62AA22;
+}
+#about {
+    font-size: 1.5em;
+    color: #91E044;
+	padding: 80px 20px 0px 30%;
+	text-align: right;
+	background: #62AA22;
+}
+
+#benefits_article {
+	background: #1F73E5;
+}
+.blue_title {
+	color: #1F73E5;
+	background: white;
+	font-size: 1.5em;
+	padding: 40px; /* Needs Work to be more Fluid with screen height*/
+}
+#benefits {
+    min-height: 300px;
+    font-size: 1.25em;
+    color: white;
+	background: #1F73E5;
+}
+#benefits img{
+	width: 60px;
+}
+.benefit{
+	width: 30vw;
+	min-width: 203px;
+    max-width: 300px;
+	height: 250px;
+	max-height: 275px;
+    display: inline-block;
+    text-align: center;
+    padding: 10px 0px;
+	margin: 10px 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.24), 0 1px 2px rgba(0,0,0,0.36);
+	vertical-align: bottom;
+}
+.benefit p{
+	padding: 0px 10px;
+}
+
+#info_article{
+	
+}
+#info_article img{
+	padding: 20px;
+	width: 300px;
+}
+#info_article h1 {
+    color: #8FA8D5;
+}
+#info_article p{
+	width: 80%;
+    margin: auto;
+}
+#info_article form{
+	margin: 20px;
+}
+input, .button, .styled-select, textarea{
+	display: block;
+    width: 250px;
+    height: 40px;
+    margin: 10px auto;
+	border: none;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	text-align: center;
+    font-family: inherit;
+}
+textarea{
+	text-align: left;
+}
+.styled-select{
+	border-radius: 0px;
+	-webkit-appearance: none;
+  	-webkit-border-radius: 0px;
+	padding: 5px;
+}
+.button{
+	background-color: #9DB6DF;
+    border: none;
+    color: white;
+}
+.button:hover{
+	background-color: #7190C3;
+}
+
+footer{
+	height: 20px;
+	color: #6B6A6A;
+	font-size: 2.2em;
+	z-index: 9999;
+  	bottom: 0;
+  	position: relative;
+	font-size: 1em;
+	background-color: white;
+	padding: 5px 10px;
+}
+footer nav li{
+	display: inline-block;
+	margin-left: 20px;
+}
+
+input[type="checkbox"] {
+    width: inherit;
+    height: inherit;
+    display: inline;
+    margin-right: 10px;
+}
+
+.signup_container{
+	text-align: center
+}
+
+#driver_signup{
+	background: #62AA22;
+	color: honeydew;
+}
+
+#driver_signup h3{
+	margin: 0px;
+	padding: 10px;
+	font-weight: lighter;
+}
+
+#driver_signup input{
+	display: inline;
+	margin: 5px;
+}
+
+.signup_background img{
+	display: block;
+	margin: 0px auto;
+	max-width: 560px;
+	width: 100vw;
+}
+
+.signup_background hr{
+	background-color: #192730;
+	height: 5px;
+	border: none;
+	margin: 0px;
+}
